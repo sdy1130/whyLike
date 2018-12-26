@@ -34,10 +34,13 @@ app.get('/reasons', (req, res) => {
 // delete a Reason
 app.delete('/delete/:rid', (req, res) => {
 	const rid = req.params.rid;
-	Reason.findOneAndRemove({_id: rid}, function(error, data) {
+	Reason.findOneAndDelete({_id: rid}, function(error, data) {
 		if(!error) {
-			console.log("Deleted")
-		}
+            res.send(data)
+        }
+        else{
+            res.status(400).send(error) // 400 for bad request
+        }
 	})
 })
 
@@ -45,8 +48,6 @@ app.delete('/delete/:rid', (req, res) => {
 app.post('/add', (req, res) => {
 	const comment = req.body.comment;
 	const date = req.body.date;
-
-    console.log("b");
 
 	const newReason = new Reason({
 		_id: mongoose.Types.ObjectId(),
@@ -57,7 +58,6 @@ app.post('/add', (req, res) => {
 	newReason.save().then((result) => {
 		// Save and send object that was saved
         res.send(result)
-        console.log(result);
 	}, (error) => {
 		res.status(400).send(error) // 400 for bad request
 	})

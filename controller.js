@@ -11,15 +11,15 @@ app.controller('whyLikeController', function($scope, $http) {
     
     // delete a Reason
     $scope.removeReason = function(reasonID) {
-		const route = `/delete/${reasonID}`
+        const route = `/delete/${reasonID}`
 
-		$http.delete(route).then((response) => {
+        $http.delete(route).then((response) => {
             for(let i = 0; i < $scope.allReasons.length; i++) { // updates webApp without needing to refresh
                 if(reasonID === $scope.allReasons[i]._id) {
                     $scope.allReasons.splice(i,1)
                 }
             }
-		})
+        })
     }
     
     // post a Reason
@@ -32,7 +32,7 @@ app.controller('whyLikeController', function($scope, $http) {
         $scope.reasonComment = '';
         const route = `/add`;
         $http.post(route, reason).then((response) => {
-            $scope.allReasons.push(reason);
+            $scope.allReasons.push(response.data);
         });
     }
 
