@@ -14,7 +14,11 @@ app.controller('whyLikeController', function($scope, $http) {
 		const route = `/delete/${reasonID}`
 
 		$http.delete(route).then((response) => {
-            $scope.allReasons = response.data;
+            for(let i = 0; i < $scope.allReasons.length; i++) { // updates webApp without needing to refresh
+                if(reasonID === $scope.allReasons[i]._id) {
+                    $scope.allReasons.splice(i,1)
+                }
+            }
 		})
     }
     
