@@ -1,0 +1,23 @@
+.centerAlign{
+    text-align: center;
+}
+
+.awayFromTop{
+    margin-top: 50px;
+}
+
+.awayFromTop2{
+    margin-top: 10px;
+}
+
+.awayFromBottom{
+    margin-bottom: 10px;
+}
+
+.font1 {
+    font-family: 'Baloo Bhaijaan', cursive;
+}
+
+.font2 {
+    font-family: 'Questrial', sans-serif;
+}
