@@ -59,12 +59,12 @@
         <span class="font1" style="font-size:50px; color:white; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;" >I Love you because...</span>
     </div>
 
-    <div class="container-fluid centerAlign awayFromBottom" style="white-space:nowrap">
+    <div class="container-fluid centerAlign awayFromBottom bringUp" style="white-space:nowrap">
         <input type="text" class="btn text-left font2" style="width: 75%; border: 1px solid black;" placeholder="Write Reason Here..."  ng-model="reasonComment">
         <button class="btn font2" style="border: 1px solid black;" ng-click="addReason()">Add</button>
     </div>
     
-    <div class="centerAlign" style="white-space:nowrap" ng-repeat="reason in allReasons">
+    <div class="centerAlign bringUp" style="white-space:nowrap" ng-repeat="reason in allReasons">
         <span class="font2" style="margin-right: 50px; font-size:30px; color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >{{reason.comment}}</span>
         <span class="font2" style="padding-left: 50px; font-size:10px; color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >{{convertDate(reason.date)}}</span>
         <span class="font2" style="font-size:10px; margin-left: 20px;">|</span>

@@ -1,25 +1,30 @@
 .centerAlign{
-    text-align: center;
+  text-align: center;
 }
 
 .awayFromTop{
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .awayFromTop2{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .awayFromBottom{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .font1 {
-    font-family: 'Baloo Bhaijaan', cursive;
+  font-family: 'Baloo Bhaijaan', cursive;
 }
 
 .font2 {
-    font-family: 'Questrial', sans-serif;
+  font-family: 'Questrial', sans-serif;
+}
+
+.bringUp {
+  position: relative; 
+  z-index: 100;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Pacifico');
